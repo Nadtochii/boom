@@ -4,4 +4,6 @@
     <string name="rules">Правила</string>
     <string name="exit">Выход</string>
     <string name="next">Дальше</string>
+    <string name="teams_number">Количество команд</string>
+    <string name="level">Уровень</string>
 </resources>

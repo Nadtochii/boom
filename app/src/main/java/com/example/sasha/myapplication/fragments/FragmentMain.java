@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.sasha.myapplication.R;
+import com.example.sasha.myapplication.game.Game;
 
 /**
  * Created by Sasha on 09.04.2016.
@@ -38,6 +39,8 @@ public class FragmentMain extends Fragment {
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Game newGame= new Game();
+                //Game.setCurrentGame(newGame);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentTeams()).addToBackStack(null).commit();
             }
         });

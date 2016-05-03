@@ -7,5 +7,7 @@
     <string name="teams_number">Количество команд</string>
     <string name="level">Уровень</string>
     <string name="words_number">Количество слов</string>
-    <string name="round_tima">Время раунда</string>
+    <string name="round_time">Время раунда</string>
+    <string name="start_game">Начать игру!</string>
+    <string name="start_round">Начать раунд!</string>
 </resources>

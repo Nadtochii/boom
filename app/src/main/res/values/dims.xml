@@ -5,4 +5,8 @@
     <dimen name="teamBtnHeight">50dp</dimen>
     <dimen name="teamBtnWidth">260dp</dimen>
     <dimen name="margin_bottom">30dp</dimen>
+    <dimen name="infoMarginTop">20dp</dimen>
+    <dimen name="infoMarginLeft">30dp</dimen>
+    <dimen name="infoRowHeight">50dp</dimen>
+    <dimen name="infoTextSize">20sp</dimen>
 </resources>

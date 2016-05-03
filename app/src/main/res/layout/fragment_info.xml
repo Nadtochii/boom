@@ -4,6 +4,17 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor">
 
+
+    <Button
+        android:layout_width="@dimen/mainBtnWidth"
+        android:layout_height="@dimen/mainBtnHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/btnBackgroundColor"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:id="@+id/startGameBtn"
+        android:text="@string/start_game"/>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -14,20 +25,75 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="@dimen/infoRowHeight">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/infoRowHeight"
+                android:layout_marginTop="@dimen/infoMarginTop"
+                android:layout_marginLeft="@dimen/infoMarginLeft"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/words_number"
                 android:id="@+id/textWordsNumber"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/infoRowHeight"
+                android:layout_marginTop="@dimen/infoMarginTop"
+                android:layout_marginLeft="70dp"
                 android:id="@+id/wordsNumber"
-                android:textSize="20sp" />
+                android:text="100"
+                android:textSize="@dimen/infoTextSize"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/infoRowHeight">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/infoRowHeight"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginTop="@dimen/infoMarginTop"
+                android:layout_marginLeft="@dimen/infoMarginLeft"
+                android:text="@string/level"
+                android:id="@+id/textLevelInfo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/infoRowHeight"
+                android:layout_marginTop="@dimen/infoMarginTop"
+                android:layout_marginLeft="160dp"
+                android:id="@+id/levelInfo"
+                android:text="70"
+                android:textSize="@dimen/infoTextSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/infoRowHeight">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/infoRowHeight"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginTop="@dimen/infoMarginTop"
+                android:layout_marginLeft="@dimen/infoMarginLeft"
+                android:text="@string/round_time"
+                android:id="@+id/textRoundTime"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/infoRowHeight"
+                android:layout_marginTop="@dimen/infoMarginTop"
+                android:layout_marginLeft="106dp"
+                android:id="@+id/RoundTime"
+                android:text="60"
+                android:textSize="@dimen/infoTextSize" />
+
         </LinearLayout>
 
     </LinearLayout>

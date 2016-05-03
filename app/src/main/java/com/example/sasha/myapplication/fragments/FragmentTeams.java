@@ -76,6 +76,8 @@ public class FragmentTeams extends Fragment {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Game.setCurrentGame(new Game(mTeamNumbers.getProgress() + Game.MIN_TEAMS_COUNT,
+                        mLevel.getProgress() + Game.MIN_GAME_LEVEL));
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentInfo()).addToBackStack(null).commit();
             }
         });

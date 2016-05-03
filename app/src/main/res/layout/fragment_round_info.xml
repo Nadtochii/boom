@@ -20,7 +20,14 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
-        
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/infoRowHeight"
+            android:layout_marginTop="@dimen/infoMarginTop"
+            android:layout_marginLeft="@dimen/infoMarginLeft">
+            
+        </LinearLayout>
 
     </LinearLayout>
 

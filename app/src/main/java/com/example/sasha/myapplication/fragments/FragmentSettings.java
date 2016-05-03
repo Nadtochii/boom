@@ -16,7 +16,7 @@ import com.example.sasha.myapplication.game.Game;
  * Created by Sasha on 09.04.2016.
  */
 
-public class FragmentTeams extends Fragment {
+public class FragmentSettings extends Fragment {
 
     private View mView;
     private SeekBar mLevel;
@@ -29,7 +29,7 @@ public class FragmentTeams extends Fragment {
         if (mView != null)
             return mView;
 
-        mView = inflater.inflate(R.layout.fragment_teams, container, false);
+        mView = inflater.inflate(R.layout.fragment_settings, container, false);
 
         final TextView teamsTextView = (TextView) mView.findViewById(R.id.teamsTextView);
         mTeamNumbers = (SeekBar) mView.findViewById(R.id.teamsSeekBar);

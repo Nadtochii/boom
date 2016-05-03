@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.sasha.myapplication.R;
@@ -15,8 +16,9 @@ import com.example.sasha.myapplication.game.Game;
  */
 public class FragmentInfo extends Fragment {
     private View mView;
-
+    private Button mStartGameBtn;
     public int mNumWords;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
@@ -29,6 +31,14 @@ public class FragmentInfo extends Fragment {
 
         final TextView wordsNumberView = (TextView) mView.findViewById(R.id.wordsNumber);
         wordsNumberView.setText(String.valueOf(mNumWords));
+
+        mStartGameBtn = (Button) mView.findViewById(R.id.startGameBtn);
+        mStartGameBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+            }
+        });
 
         return mView;
     }

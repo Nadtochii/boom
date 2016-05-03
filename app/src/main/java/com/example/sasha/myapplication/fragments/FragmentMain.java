@@ -2,14 +2,12 @@ package com.example.sasha.myapplication.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.ButtonBarLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.sasha.myapplication.R;
-import com.example.sasha.myapplication.game.Game;
 
 /**
  * Created by Sasha on 09.04.2016.
@@ -41,7 +39,7 @@ public class FragmentMain extends Fragment {
             public void onClick(View v) {
                 //Game newGame= new Game();
                 //Game.setCurrentGame(newGame);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentTeams()).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentSettings()).addToBackStack(null).commit();
             }
         });
 

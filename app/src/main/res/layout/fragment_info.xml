@@ -42,7 +42,6 @@
                 android:layout_marginTop="@dimen/infoMarginTop"
                 android:layout_marginLeft="70dp"
                 android:id="@+id/wordsNumber"
-                android:text="100"
                 android:textSize="@dimen/infoTextSize"/>
         </LinearLayout>
 
@@ -89,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/infoRowHeight"
                 android:layout_marginTop="@dimen/infoMarginTop"
-                android:layout_marginLeft="106dp"
+                android:layout_marginLeft="104dp"
                 android:id="@+id/RoundTime"
                 android:text="60"
                 android:textSize="@dimen/infoTextSize" />

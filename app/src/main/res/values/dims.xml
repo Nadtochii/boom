@@ -4,5 +4,5 @@
     <dimen name="mainBtnWidth">260dp</dimen>
     <dimen name="teamBtnHeight">50dp</dimen>
     <dimen name="teamBtnWidth">260dp</dimen>
-    <dimen name="margin_bottom">10dp</dimen>
+    <dimen name="margin_bottom">30dp</dimen>
 </resources>

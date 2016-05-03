@@ -10,16 +10,16 @@ public class Game {
 
     private static Game sCurrentGame = null;
 
-    private int mNumTeams = 2;
-    private int mLevel = 4;
+    private int mNumTeams;
+    private int mLevel;
 
     public Game(int numTeams, int level) {
         mNumTeams = numTeams;
         mLevel = level;
     }
 
-    public int getNumTeams() {
-        return mNumTeams;
+    public int getNumWords() {
+        return mNumTeams*10;
     }
 
     public static Game getCurrentGame() {

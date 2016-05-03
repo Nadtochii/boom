@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -18,6 +19,10 @@ import com.example.sasha.myapplication.game.Game;
 public class FragmentTeams extends Fragment {
 
     private View mView;
+    private SeekBar mLevel;
+    private SeekBar mTeamNumbers;
+
+    private Button mNextButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
@@ -27,8 +32,8 @@ public class FragmentTeams extends Fragment {
         mView = inflater.inflate(R.layout.fragment_teams, container, false);
 
         final TextView teamsTextView = (TextView) mView.findViewById(R.id.teamsTextView);
-        SeekBar numTeamsSeekBar = (SeekBar) mView.findViewById(R.id.teamsSeekBar);
-        numTeamsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        mTeamNumbers = (SeekBar) mView.findViewById(R.id.teamsSeekBar);
+        mTeamNumbers.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 teamsTextView.setText(String.valueOf(Game.MIN_TEAMS_COUNT + progress));
@@ -46,8 +51,8 @@ public class FragmentTeams extends Fragment {
         });
 
         final TextView levelTextView = (TextView) mView.findViewById(R.id.levelTextView);
-        SeekBar levelSeekBar = (SeekBar) mView.findViewById(R.id.levelSeekBar);
-        levelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        mLevel = (SeekBar) mView.findViewById(R.id.levelSeekBar);
+        mLevel.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 levelTextView.setText(String.valueOf(Game.MIN_GAME_LEVEL + progress));
@@ -64,8 +69,18 @@ public class FragmentTeams extends Fragment {
             }
         });
 
+        Game.setCurrentGame(new Game(mTeamNumbers.getProgress() +
+                Game.MIN_TEAMS_COUNT, mLevel.getProgress() + Game.MIN_GAME_LEVEL));
+
+        mNextButton = (Button) mView.findViewById(R.id.nextButton);
+        mNextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentInfo()).addToBackStack(null).commit();
+            }
+        });
+
         return mView;
 
-        //Game.getCurrentGame().setNumTeams(4);
     }
 }

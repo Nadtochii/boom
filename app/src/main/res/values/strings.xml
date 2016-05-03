@@ -6,4 +6,6 @@
     <string name="next">Дальше</string>
     <string name="teams_number">Количество команд</string>
     <string name="level">Уровень</string>
+    <string name="words_number">Количество слов</string>
+    <string name="round_tima">Время раунда</string>
 </resources>

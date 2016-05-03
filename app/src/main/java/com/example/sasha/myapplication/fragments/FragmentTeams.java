@@ -45,6 +45,25 @@ public class FragmentTeams extends Fragment {
             }
         });
 
+        final TextView levelTextView = (TextView) mView.findViewById(R.id.levelTextView);
+        SeekBar levelSeekBar = (SeekBar) mView.findViewById(R.id.levelSeekBar);
+        levelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                levelTextView.setText(String.valueOf(Game.MIN_GAME_LEVEL + progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
         return mView;
 
         //Game.getCurrentGame().setNumTeams(4);

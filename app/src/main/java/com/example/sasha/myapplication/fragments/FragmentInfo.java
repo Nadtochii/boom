@@ -18,6 +18,7 @@ public class FragmentInfo extends Fragment {
     private View mView;
     private Button mStartGameBtn;
     public int mNumWords;
+    public int mGameLevel;
 
 
     @Override
@@ -31,6 +32,11 @@ public class FragmentInfo extends Fragment {
 
         final TextView wordsNumberView = (TextView) mView.findViewById(R.id.wordsNumber);
         wordsNumberView.setText(String.valueOf(mNumWords));
+
+        mGameLevel = Game.getCurrentGame().getLevel();
+
+        final TextView gameLevelView = (TextView) mView.findViewById(R.id.levelInfo);
+        gameLevelView.setText(String.valueOf(mGameLevel));
 
         mStartGameBtn = (Button) mView.findViewById(R.id.startGameBtn);
         mStartGameBtn.setOnClickListener(new View.OnClickListener() {

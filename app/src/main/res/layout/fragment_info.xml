@@ -65,32 +65,6 @@
                 android:layout_marginTop="@dimen/infoMarginTop"
                 android:layout_marginLeft="160dp"
                 android:id="@+id/levelInfo"
-                android:text="70"
-                android:textSize="@dimen/infoTextSize" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/infoRowHeight">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/infoRowHeight"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_marginTop="@dimen/infoMarginTop"
-                android:layout_marginLeft="@dimen/infoMarginLeft"
-                android:text="@string/round_time"
-                android:id="@+id/textRoundTime"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/infoRowHeight"
-                android:layout_marginTop="@dimen/infoMarginTop"
-                android:layout_marginLeft="104dp"
-                android:id="@+id/RoundTime"
-                android:text="60"
                 android:textSize="@dimen/infoTextSize" />
 
         </LinearLayout>

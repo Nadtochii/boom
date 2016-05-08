@@ -26,6 +26,10 @@ public class Game {
         return mLevel;
     }
 
+    public int getNumTeams() {
+        return mNumTeams;
+    }
+
     public static Game getCurrentGame() {
         return sCurrentGame;
     }

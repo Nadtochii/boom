@@ -10,4 +10,5 @@
     <string name="round_time">Время раунда</string>
     <string name="start_game">Начать игру!</string>
     <string name="start_round">Начать раунд!</string>
+    <string name="guessed">Отгадано</string>
 </resources>

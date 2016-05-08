@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/infoRowHeight"
+        android:layout_centerVertical="true"
+        android:id="@+id/word"/>
+
+    <Button
+        android:layout_width="@dimen/mainBtnWidth"
+        android:layout_height="@dimen/mainBtnHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/btnBackgroundColor"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:id="@+id/startGameBtn"
+        android:text="@string/guessed"/>
+
+</RelativeLayout>

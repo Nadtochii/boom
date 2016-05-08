@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.sasha.myapplication.R;
@@ -25,6 +26,7 @@ public class FragmentRoundInfo extends Fragment implements EventsManager.EventHa
     private View mView;
     private ArrayList<TeamScore> mScores;
     private ListView mScoreboardListView;
+    private Button mStartRoundBtn;
 
 
     @Override
@@ -41,6 +43,14 @@ public class FragmentRoundInfo extends Fragment implements EventsManager.EventHa
         mScoreboardListView.setAdapter(new TeamScoreAdapter(getActivity(), mScores));
 
         EventsManager.addHandler(EventType.SCORE_CHANGED, this);
+
+        mStartRoundBtn = (Button) mView.findViewById(R.id.startGameBtn);
+        mStartRoundBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRound()).addToBackStack(null).commit();
+            }
+        });
 
         return mView;
     }

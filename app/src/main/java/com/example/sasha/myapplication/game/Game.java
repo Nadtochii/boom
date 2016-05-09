@@ -7,6 +7,7 @@ public class Game {
 
     public static final int MIN_TEAMS_COUNT = 2;
     public static final int MIN_GAME_LEVEL = 1;
+    public static final int ROUND_TIME = 5000;
 
     private static Game sCurrentGame = null;
 

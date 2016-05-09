@@ -23,6 +23,7 @@ public class FragmentRound extends Fragment {
     private View mView;
 
     private Button mGuessed;
+    private Button mNotGuessed;
     private TextView mPerson;
 
     private Timer mTimer;
@@ -36,19 +37,22 @@ public class FragmentRound extends Fragment {
             return mView;
 
         mView = inflater.inflate(R.layout.fragment_round, container, false);
-
         mPersonsInGame = Game.getCurrentGame().getPersons();
-//        mGuessed = (Button) mView.findViewById(R.id.guessed);
-//        mGuessed.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startTimer();
-//            }
-//        });
 
         startTimer();
         mPerson = (TextView) mView.findViewById(R.id.person);
-        mPerson.setText(mPersonsInGame.get(3));
+        mPerson.setText(mPersonsInGame.get(0));
+
+        mGuessed = (Button) mView.findViewById(R.id.guessed);
+        mNotGuessed = (Button) mView.findViewById(R.id.not_guessed);
+
+        mGuessed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //show next person
+            }
+        });
+
         return mView;
     }
 
@@ -59,7 +63,22 @@ public class FragmentRound extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                        mNotGuessed.setVisibility(View.VISIBLE);
+                        mNotGuessed.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                //person was not guessed
+                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                            }
+                        });
+
+                        mGuessed.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                //person was guessed
+                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                            }
+                        });
                     }
                 });
             }

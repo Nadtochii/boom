@@ -10,5 +10,9 @@
     <string name="round_time">Время раунда</string>
     <string name="start_game">Начать игру!</string>
     <string name="start_round">Начать раунд!</string>
-    <string name="guessed">Отгадано</string>
+    <string name="guessed">Отгадали</string>
+    <string name="not_guessed">Не отгадали</string>
+    <string name="circle">Круг: </string>
+    <string name="round">Раунд: </string>
+    <string name="team_play">Играет команда: </string>
 </resources>

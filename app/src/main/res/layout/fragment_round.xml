@@ -5,10 +5,23 @@
     android:background="@color/backgroundColor">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/infoRowHeight"
         android:layout_centerVertical="true"
-        android:id="@+id/person"/>
+        android:layout_centerHorizontal="true"
+        android:id="@+id/person"
+        android:textSize="@dimen/infoTextSize" />
+
+    <Button
+        android:visibility="invisible"
+        android:layout_width="@dimen/mainBtnWidth"
+        android:layout_height="@dimen/mainBtnHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/btnBackgroundColor"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/not_guessed"
+        android:text="@string/not_guessed"/>
 
     <Button
         android:layout_width="@dimen/mainBtnWidth"

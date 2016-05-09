@@ -75,12 +75,8 @@ public class FragmentSettings extends Fragment {
             }
         });
 
-//        Game.setCurrentGame(new Game(mTeamNumbers.getProgress() +
-//                Game.MIN_TEAMS_COUNT, mLevel.getProgress() + Game.MIN_GAME_LEVEL));
-
         Resources resources = getResources();
         String[] persons = resources.getStringArray(R.array.persons);
-        Log.d("Boom", "2222" + persons[3]);
         final ArrayList<String> personsList = new ArrayList<String>(Arrays.asList(persons));
 
         mNextButton = (Button) mView.findViewById(R.id.nextButton);

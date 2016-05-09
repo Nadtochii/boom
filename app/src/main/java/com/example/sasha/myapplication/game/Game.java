@@ -21,6 +21,10 @@ public class Game {
     private int mLevel;
     private ArrayList<String> mPersons;
 
+    public ArrayList<String> mPersonsIn;
+    public ArrayList<String> mPersonsOut;
+
+
     public Game(int numTeams, int level, ArrayList<String> persons) {
         mNumTeams = numTeams;
         mLevel = level;

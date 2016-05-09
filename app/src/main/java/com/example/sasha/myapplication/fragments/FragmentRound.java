@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.sasha.myapplication.R;
 import com.example.sasha.myapplication.game.Game;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,6 +28,8 @@ public class FragmentRound extends Fragment {
     private Timer mTimer;
     private TimerTask mTimerTask;
 
+    private ArrayList<String> mPersonsInGame;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
         if (mView != null)
@@ -34,6 +37,7 @@ public class FragmentRound extends Fragment {
 
         mView = inflater.inflate(R.layout.fragment_round, container, false);
 
+        mPersonsInGame = Game.getCurrentGame().getPersons();
 //        mGuessed = (Button) mView.findViewById(R.id.guessed);
 //        mGuessed.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -42,8 +46,9 @@ public class FragmentRound extends Fragment {
 //            }
 //        });
 
-        mPerson = (TextView) mView.findViewById(R.id.person);
         startTimer();
+        mPerson = (TextView) mView.findViewById(R.id.person);
+        mPerson.setText(mPersonsInGame.get(3));
         return mView;
     }
 

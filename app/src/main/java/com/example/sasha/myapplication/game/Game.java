@@ -1,5 +1,11 @@
 package com.example.sasha.myapplication.game;
 
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 /**
  * Created by Sasha on 03.05.2016.
  */
@@ -13,10 +19,14 @@ public class Game {
 
     private int mNumTeams;
     private int mLevel;
+    private ArrayList<String> mPersons;
 
-    public Game(int numTeams, int level) {
+    public Game(int numTeams, int level, ArrayList<String> persons) {
         mNumTeams = numTeams;
         mLevel = level;
+
+        Collections.shuffle(persons);
+        mPersons = new ArrayList<>(persons.subList(0, 5));
     }
 
     public int getNumWords() {
@@ -39,4 +49,7 @@ public class Game {
         sCurrentGame = game;
     }
 
+    public ArrayList<String> getPersons() {
+        return mPersons;
+    }
 }

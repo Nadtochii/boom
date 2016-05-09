@@ -1,7 +1,9 @@
 package com.example.sasha.myapplication.fragments;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,10 @@ import android.widget.TextView;
 
 import com.example.sasha.myapplication.R;
 import com.example.sasha.myapplication.game.Game;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Sasha on 09.04.2016.
@@ -69,15 +75,20 @@ public class FragmentSettings extends Fragment {
             }
         });
 
-        Game.setCurrentGame(new Game(mTeamNumbers.getProgress() +
-                Game.MIN_TEAMS_COUNT, mLevel.getProgress() + Game.MIN_GAME_LEVEL));
+//        Game.setCurrentGame(new Game(mTeamNumbers.getProgress() +
+//                Game.MIN_TEAMS_COUNT, mLevel.getProgress() + Game.MIN_GAME_LEVEL));
+
+        Resources resources = getResources();
+        String[] persons = resources.getStringArray(R.array.persons);
+        Log.d("Boom", "2222" + persons[3]);
+        final ArrayList<String> personsList = new ArrayList<String>(Arrays.asList(persons));
 
         mNextButton = (Button) mView.findViewById(R.id.nextButton);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Game.setCurrentGame(new Game(mTeamNumbers.getProgress() + Game.MIN_TEAMS_COUNT,
-                        mLevel.getProgress() + Game.MIN_GAME_LEVEL));
+                        mLevel.getProgress() + Game.MIN_GAME_LEVEL, personsList));
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentInfo()).addToBackStack(null).commit();
             }
         });

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="persons">
+        <item>Сальвадор Дали</item>
+        <item>Чарли Чаплин</item>
+        <item>Ленин</item>
+        <item>Менделеев</item>
+        <item>Карл Маркс</item>
+        <item>Моцарт</item>
+        <item>Галилео Галилей</item>
+        <item>Юлий Цезарь</item>
+        <item>Сократ</item>
+        <item>Мойдодыр</item>
+        <item>Том и Джерри</item>
+        <item>Баба Яга</item>
+        <item>Конек-Горбунок</item>
+        <item>Три поросенка</item>
+        <item>Гулливер</item>
+    </string-array>
+</resources>

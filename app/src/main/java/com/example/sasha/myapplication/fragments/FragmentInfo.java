@@ -1,5 +1,6 @@
 package com.example.sasha.myapplication.fragments;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,12 +29,13 @@ public class FragmentInfo extends Fragment {
 
         mView = inflater.inflate(R.layout.fragment_info, container, false);
 
-        mNumWords = Game.getCurrentGame().getNumWords();
+        Game currentGame = Game.getCurrentGame();
+        mNumWords = currentGame.getNumWords();
 
         final TextView wordsNumberView = (TextView) mView.findViewById(R.id.wordsNumber);
         wordsNumberView.setText(String.valueOf(mNumWords));
 
-        mGameLevel = Game.getCurrentGame().getLevel();
+        mGameLevel = currentGame.getLevel();
 
         final TextView gameLevelView = (TextView) mView.findViewById(R.id.levelInfo);
         gameLevelView.setText(String.valueOf(mGameLevel));

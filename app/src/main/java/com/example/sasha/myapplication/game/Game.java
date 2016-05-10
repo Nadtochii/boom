@@ -72,7 +72,7 @@ public class Game {
     }
 
     public boolean isRoundFinished() {
-        return mPersonsIn.size() < 1;
+        return mPersonsIn.size() < 2;
     }
 
     public boolean isGameFinished() {
@@ -144,5 +144,9 @@ public class Game {
             }
         }
         return winners;
+    }
+
+    public GameRound getCurrentRound() {
+        return mGameRound;
     }
 }

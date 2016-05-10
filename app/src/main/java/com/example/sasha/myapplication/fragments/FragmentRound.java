@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.sasha.myapplication.R;
 import com.example.sasha.myapplication.game.Game;
+import com.example.sasha.myapplication.models.Team;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -30,6 +31,9 @@ public class FragmentRound extends Fragment {
     private TimerTask mTimerTask;
 
     private ArrayList<String> mPersonsInGame;
+    private ArrayList<Team> mWinners;
+
+    private Game currentGame = Game.getCurrentGame();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
@@ -49,7 +53,21 @@ public class FragmentRound extends Fragment {
         mGuessed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //show next person
+                currentGame.onPersonGuessed();
+                if (!currentGame.isGameFinished() && !currentGame.isRoundFinished()) {
+                    mPerson.setText(currentGame.getCurrentPerson());
+                }
+                if (currentGame.isGameFinished()) {
+                    mTimer.cancel();
+                    //show winner
+                    mWinners = currentGame.getWinners();
+                }
+                if (currentGame.isRoundFinished()) {
+                    currentGame.rotateActiveTeam();
+                    currentGame.startNextRound();
+                    mTimer.cancel();
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                }
             }
         });
 
@@ -68,6 +86,8 @@ public class FragmentRound extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 //person was not guessed
+                                currentGame.onPersonNotGuessed();
+                                currentGame.rotateActiveTeam();
                                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
                             }
                         });
@@ -76,7 +96,21 @@ public class FragmentRound extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 //person was guessed
-                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                                if (!currentGame.isGameFinished() && !currentGame.isRoundFinished()) {
+                                    currentGame.onPersonGuessed();
+                                    currentGame.rotateActiveTeam();
+                                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                                }
+                                if (currentGame.isGameFinished()) {
+                                    currentGame.onPersonGuessed();
+                                    mWinners = currentGame.getWinners();
+                                }
+                                if (currentGame.isRoundFinished()) {
+                                    currentGame.onPersonGuessed();
+                                    currentGame.rotateActiveTeam();
+                                    currentGame.startNextRound();
+                                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                                }
                             }
                         });
                     }
@@ -90,5 +124,4 @@ public class FragmentRound extends Fragment {
         initTimerTask();
         mTimer.schedule(mTimerTask, Game.ROUND_TIME);
     }
-
 }

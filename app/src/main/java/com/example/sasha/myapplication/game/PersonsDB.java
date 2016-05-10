@@ -6,7 +6,6 @@ import com.example.sasha.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,6 +59,6 @@ public class PersonsDB {
         assert personsOnLevel.size() >= count : "Too much words queried: " + String.valueOf(count);
 
         Collections.shuffle(personsOnLevel);
-        return (ArrayList<String>) personsOnLevel.subList(0, count);
+        return new ArrayList<String>(personsOnLevel.subList(0, count));
     }
 }

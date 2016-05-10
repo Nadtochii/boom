@@ -83,7 +83,7 @@ public class FragmentSettings extends Fragment {
                 int level = mLevel.getProgress() + Game.MIN_GAME_LEVEL;
                 int teamsCount = mTeamNumbers.getProgress() + Game.MIN_TEAMS_COUNT;
                 Game.setCurrentGame(new Game(teamsCount, level,
-                        PersonsDB.getPersons(level, teamsCount * 10)));  // TODO: move 10 to consts
+                        PersonsDB.getPersons(level, teamsCount * Game.PERSONS_PER_TEAM)));
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentInfo()).addToBackStack(null).commit();
             }
         });

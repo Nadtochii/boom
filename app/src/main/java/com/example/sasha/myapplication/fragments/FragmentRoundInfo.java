@@ -12,11 +12,6 @@ import com.example.sasha.myapplication.R;
 import com.example.sasha.myapplication.adapters.TeamScoreAdapter;
 import com.example.sasha.myapplication.events.EventType;
 import com.example.sasha.myapplication.events.EventsManager;
-import com.example.sasha.myapplication.game.Game;
-import com.example.sasha.myapplication.models.Team;
-import com.example.sasha.myapplication.models.TeamScore;
-
-import java.util.ArrayList;
 
 /**
  * Created by Sasha on 03.05.2016.
@@ -24,7 +19,6 @@ import java.util.ArrayList;
 public class FragmentRoundInfo extends Fragment implements EventsManager.EventHandler{
 
     private View mView;
-    private ArrayList<TeamScore> mScores;
     private ListView mScoreboardListView;
     private Button mStartRoundBtn;
 
@@ -35,12 +29,8 @@ public class FragmentRoundInfo extends Fragment implements EventsManager.EventHa
             return mView;
 
         mView = inflater.inflate(R.layout.fragment_round_info, container, false);
-        mScores = new ArrayList<>();
-        for (int i = 0; i < Game.getCurrentGame().getNumTeams(); ++i) {
-            mScores.add(new TeamScore(new Team("Team " + String.valueOf(i + 1))));
-        }
         mScoreboardListView = (ListView) mView.findViewById(R.id.scoreboard);
-        mScoreboardListView.setAdapter(new TeamScoreAdapter(getActivity(), mScores));
+        mScoreboardListView.setAdapter(new TeamScoreAdapter(getActivity()));
 
         EventsManager.addHandler(EventType.SCORE_CHANGED, this);
 
@@ -65,7 +55,7 @@ public class FragmentRoundInfo extends Fragment implements EventsManager.EventHa
     public void handleEvent(EventType eventType, Object eventData) {
         switch (eventType) {
             case SCORE_CHANGED:
-                mScoreboardListView.invalidateViews();
+                ((TeamScoreAdapter) mScoreboardListView.getAdapter()).notifyDataSetChanged();
         }
     }
 }

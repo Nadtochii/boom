@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.sasha.myapplication.R;
 import com.example.sasha.myapplication.game.Game;
+import com.example.sasha.myapplication.game.PersonsDB;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,22 +76,14 @@ public class FragmentSettings extends Fragment {
             }
         });
 
-        final int[] persons_list = new int[] {
-                R.array.persons_level_1,
-                R.array.persons_level_2,
-        };
-
         mNextButton = (Button) mView.findViewById(R.id.nextButton);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Resources resources = getResources();
-                Log.d("Boom", "level is" + String.valueOf(mLevel.getProgress()));
-                String[] persons = resources.getStringArray(persons_list[mLevel.getProgress()]);
-                final ArrayList<String> personsList = new ArrayList<String>(Arrays.asList(persons));
-
-                Game.setCurrentGame(new Game(mTeamNumbers.getProgress() + Game.MIN_TEAMS_COUNT,
-                        mLevel.getProgress() + Game.MIN_GAME_LEVEL, personsList));
+                int level = mLevel.getProgress() + Game.MIN_GAME_LEVEL;
+                int teamsCount = mTeamNumbers.getProgress() + Game.MIN_TEAMS_COUNT;
+                Game.setCurrentGame(new Game(teamsCount, level,
+                        PersonsDB.getPersons(level, teamsCount * 10)));  // TODO: move 10 to consts
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentInfo()).addToBackStack(null).commit();
             }
         });

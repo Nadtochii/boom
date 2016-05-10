@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.example.sasha.myapplication.events.EventsManager;
 import com.example.sasha.myapplication.fragments.FragmentMain;
+import com.example.sasha.myapplication.game.PersonsDB;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        PersonsDB.init(this);
         EventsManager.init(this);
 
         setContentView(R.layout.activity_main);
@@ -27,5 +29,13 @@ public class MainActivity extends AppCompatActivity {
 //                mRulesButton.setText("This is rules!");
 //            }
 //        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        EventsManager.terminate();
+        PersonsDB.terminate();
+
+        super.onDestroy();
     }
 }

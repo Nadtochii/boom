@@ -75,14 +75,20 @@ public class FragmentSettings extends Fragment {
             }
         });
 
-        Resources resources = getResources();
-        String[] persons = resources.getStringArray(R.array.persons);
-        final ArrayList<String> personsList = new ArrayList<String>(Arrays.asList(persons));
+        final int[] persons_list = new int[] {
+                R.array.persons_level_1,
+                R.array.persons_level_2,
+        };
 
         mNextButton = (Button) mView.findViewById(R.id.nextButton);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Resources resources = getResources();
+                Log.d("Boom", "level is" + String.valueOf(mLevel.getProgress()));
+                String[] persons = resources.getStringArray(persons_list[mLevel.getProgress()]);
+                final ArrayList<String> personsList = new ArrayList<String>(Arrays.asList(persons));
+
                 Game.setCurrentGame(new Game(mTeamNumbers.getProgress() + Game.MIN_TEAMS_COUNT,
                         mLevel.getProgress() + Game.MIN_GAME_LEVEL, personsList));
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentInfo()).addToBackStack(null).commit();

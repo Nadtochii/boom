@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="persons_level_2">
+        <item>2Сальвадор Дали</item>
+        <item>2Чарли Чаплин</item>
+        <item>2Ленин</item>
+        <item>2Менделеев</item>
+        <item>2Карл Маркс</item>
+        <item>2Моцарт</item>
+        <item>2Галилео Галилей</item>
+        <item>2Юлий Цезарь</item>
+        <item>2Сократ</item>
+        <item>2Мойдодыр</item>
+        <item>2Том и Джерри</item>
+        <item>2Баба Яга</item>
+        <item>2Конек-Горбунок</item>
+        <item>2Три поросенка</item>
+        <item>2Гулливер</item>
+    </string-array>
+</resources>

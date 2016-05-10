@@ -32,8 +32,8 @@ public class PersonsDB {
         mPersons = new HashMap<>();
         for (Map.Entry<Integer, Integer> entry: sResourcesMap.entrySet()) {
             int level = entry.getKey(), resourceId = entry.getValue();
-            ArrayList<String> persons = (ArrayList<String>) Arrays.asList(
-                    mContext.getResources().getStringArray(resourceId));
+            ArrayList<String> persons = new ArrayList<String>(Arrays.asList(
+                    mContext.getResources().getStringArray(resourceId)));
             mPersons.put(level, persons);
         }
     }

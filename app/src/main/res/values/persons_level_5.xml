@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="persons_level_5">
+        <item>Мартин Лютер Кинг</item>
+        <item>Королев</item>
+        <item>Дэн Сяопин</item>
+        <item>Роберт Оппегеймер</item>
+        <item>Альфред Хичкок</item>
+        <item>Мао Цзэдун</item>
+        <item>Рузвельт</item>
+        <item>Александр Флеминг</item>
+        <item>Маршалл</item>
+        <item>капитан Руаль Амундсен</item>
+        <item>Махамта</item>
+        <item>Владимир Иванович Вернадский</item>
+        <item>Генри Форд</item>
+        <item>Иван Петрович Павлов</item>
+        <item>Петр Ильич Чайковский</item>
+        <item>Дмитрий Иванович Менделеев</item>
+        <item>Лев Николаевич Толстой</item>
+        <item>Луи Пастер</item>
+        <item>Федор Михайлович Достоевский</item>
+        <item>николай Иванович Пирогов</item>
+        <item>чарльз Роберт Дарвин</item>
+        <item>Александр Сергеевич Пушкин</item>
+        <item>Джеймс Уатт</item>
+        <item>Екатерина Вторая</item>
+        <item>капитан Джеймс Кук</item>
+        <item>Сэр Исаак Ньютон</item>
+        <item>Жан Батист Поклен</item>
+        <item>Рене Декарт</item>
+        <item>николай Коперник</item>
+        <item>Святой Франциск</item>
+        <item>Александр Македонский</item>
+        <item>Евклид</item>
+        <item>Платон</item>
+        <item>Демокрит</item>
+        <item>Геродот</item>
+        <item>Протагор</item>
+        <item>Эзоп</item>
+        <item>Еврипид</item>
+        <item>Иисус Христос</item>
+        <item>Мухаммед</item>
+        <item>Будда</item>
+        <item>Апостол Павел</item>
+        <item>Моисей</item>
+        <item>Цинь Шихуанди</item>
+        <item>Чингисхан</item>
+        <item>Джон Дальтон</item>
+        <item>томас Эдисон</item>
+        <item>Фрэнсис Бэкон</item>
+        <item>Михаил Горбачев</item>
+        <item>Нильс Бор</item>
+        <item>Антуан Беккерель</item>
+        <item>Фома Аквинский</item>
+        <item>Чарльз Бэббидж</item>
+        <item>Фернан Магеллан</item>
+        <item>Говард Эйкен</item>
+        <item>Сьюзен Энтони</item>
+        <item>Богородица</item>
+        <item>Рембрандт</item>
+        <item>Эрвин Шредингер</item>
+        <item>Уильям Шокли</item>
+        <item>Уильям Тальбот</item>
+        <item>Эдвард Теллер</item>
+        <item>Чарлз Таунс</item>
+        <item>Генри Торо</item>
+        <item>Гарри Трумен</item>
+        <item>Зельман Ваксман</item>
+        <item>Борис Ельцин</item>
+        <item>Владимир Зворыкин</item>
+        <item>Фрэнк Ллойд Райт</item>
+        <item>Джеймс Уотсон</item>
+        <item>Джеймс Бонд</item>
+        <item>Ганнибал Лектер</item>
+        <item>Дарт Вейдер</item>
+        <item>Индиана Джонс</item>
+        <item>Терминатор</item>
+        <item>Бэтмен</item>
+        <item>Зорро</item>
+        <item>Тарзан</item>
+        <item>Граф Дракула</item>
+        <item>Марсианин</item>
+        <item>Супермен</item>
+        <item>Спартак</item>
+        <item>Максимус</item>
+        <item>Тони Камонте</item>
+        <item>Ганс Грубер</item>
+        <item>Джокер</item>
+        <item>Зорро</item>
+        <item>Джейн Хадсон</item>
+        <item>Регина Гидденс</item>
+        <item>Том Пауэр</item>
+        <item>Гарри Лайм</item>
+        <item>Оюи-Ван Кеноби</item>
+        <item>Бонни Паркер</item>
+        <item>Клайд Бэрроу</item>
+        <item>Тревис Бикл</item>
+        <item>Генерал Паттон</item>
+        <item>Люк Джексон</item>
+        <item>Элвин Йорк</item>
+        <item>Коди Джаррет</item>
+        <item>Джефферсон Смит</item>
+     </string-array>
+</resources>

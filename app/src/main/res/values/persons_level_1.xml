@@ -1,20 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="persons_level_1">
-        <item>1Сальвадор Дали</item>
-        <item>1Чарли Чаплин</item>
-        <item>1Ленин</item>
-        <item>1Менделеев</item>
-        <item>1Карл Маркс</item>
-        <item>1Моцарт</item>
-        <item>1Галилео Галилей</item>
-        <item>1Юлий Цезарь</item>
-        <item>1Сократ</item>
-        <item>1Мойдодыр</item>
-        <item>1Том и Джерри</item>
-        <item>1Баба Яга</item>
-        <item>1Конек-Горбунок</item>
-        <item>1Три поросенка</item>
-        <item>1Гулливер</item>
+        <item>Сальвадор Дали</item>
+        <item>Чарли Чаплин</item>
+        <item>Ленин</item>
+        <item>Менделеев</item>
+        <item>Карл Маркс</item>
+        <item>Моцарт</item>
+        <item>Галилео Галилей</item>
+        <item>Юлий Цезарь</item>
+        <item>Сократ</item>
+        <item>Мойдодыр</item>
+        <item>Том и Джерри</item>
+        <item>Баба Яга</item>
+        <item>Конек-Горбунок</item>
+        <item>Три поросенка</item>
+        <item>Гулливер</item>
+        <item>Кот в сапогах</item>
+        <item>Пеппи длинный чулок</item>
+        <item>Хоттабыч</item>
+        <item>Шахерезада</item>
+        <item>Бритни Спирс</item>
+        <item>Элвис Пресли</item>
+        <item>Джаред Лето</item>
+        <item>Виктория Бекхэм</item>
+        <item>Эминем</item>
+        <item>Жанна Фриске</item>
+        <item>Светлана Лобода</item>
+        <item>Виктория Дайнеко</item>
+        <item>Наташа Королева</item>
+        <item>Мадонна</item>
+        <item>Брюс Ли</item>
+        <item>Клод Моне</item>
+        <item>Адольф Гитлер</item>
+        <item>Мария Кюри</item>
+        <item>Альфред Нобель</item>
+        <item>Пирогов</item>
+        <item>Джордж Вашингтон</item>
+        <item>Уильям Шекспир</item>
+        <item>Архимед</item>
+        <item>Геродот</item>
+        <item>Маша и Медведь</item>
+        <item>Человек-Паук</item>
+        <item>Буратино</item>
+        <item>Красная шапочка</item>
+        <item>Алиса в стране чудес</item>
+        <item>Емеля</item>
+        <item>Маленький Принц</item>
+        <item>Питер Пен</item>
+        <item>Чебурашка</item>
+        <item>Прометей</item>
+        <item>Леди Гага</item>
+        <item>Майкл Джексон</item>
+        <item>Лара Фабиан</item>
+        <item>Дан Балан</item>
+        <item>Пинк</item>
+        <item>Полина Гагарина</item>
+        <item>Лайме Вайкуле</item>
+        <item>Алсу</item>
+        <item>Сати Казанова</item>
+        <item>Жан-Клод Ван Дамм</item>
+        <item>Анджелина Джоли</item>
+        <item>Джонни Депп</item>
+        <item>Леонардо Ди Каприо</item>
+        <item>Эмма Уотсон</item>
+        <item>Камерон Диаз</item>
+        <item>Джимми Карр</item>
+        <item>Джим Керри</item>
+        <item>Версаче</item>
+        <item>Валентино</item>
+        <item>Шарапова Мария</item>
+        <item>Барак Обама</item>
+        <item>Владимир Путин</item>
+        <item>Виктор Ющенко</item>
+        <item>Юлия Тимошенко</item>
+        <item>Петр Порошенко</item>
+        <item>Виктор Янукович</item>
+        <item>Владимир Зеленский</item>
+        <item>Елена Кравцова</item>
+        <item>Игорь Ласточкин</item>
+        <item>Сергей Сивоха</item>
     </string-array>
 </resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="persons_level_3">
+        <item>Винсент Ван Гог</item>
+        <item>Альберт Эйнштейн</item>
+        <item>Фридрих Ницше</item>
+        <item>Жюль Верн</item>
+        <item>Пушкин</item>
+        <item>Петр Первый</item>
+        <item>Жанна дАрк</item>
+        <item>Аристотель</item>
+        <item>Гомер</item>
+        <item>Микки Маус</item>
+        <item>Снупи</item>
+        <item>Айболит</item>
+        <item>Русалочка</item>
+        <item>Буратино</item>
+        <item>Карлсон</item>
+        <item>Незнайка</item>
+        <item>Том Сойер</item>
+        <item>Кикимора</item>
+        <item>Мадонна</item>
+        <item>Шакира</item>
+        <item>Джон Леннон</item>
+        <item>Пол Маккартни</item>
+        <item>Адриано Челентано</item>
+        <item>Александр Рыбак</item>
+        <item>Ирина Аллегрова</item>
+        <item>София Ротару</item>
+        <item>Алла Пугачева</item>
+        <item>Кристина Орбакайте</item>
+        <item>Кристен Стюарт</item>
+        <item>Аврил Лавин</item>
+        <item>Роберт Паттинсон</item>
+        <item>Дженнифер Энистон</item>
+        <item>Кира Найтли</item>
+        <item>Брэд Питт</item>
+        <item>Чайковский</item>
+        <item>Шуберт</item>
+        <item>Кельвин Кляйн</item>
+        <item>Кристиан Диор</item>
+        <item>Мария Митчелл</item>
+        <item>Гарфилд</item>
+        <item>Айвазовский</item>
+        <item>Иосиф Сталин</item>
+        <item>Чайковский</item>
+        <item>Достоевский</item>
+        <item>Наполеон</item>
+        <item>Ньютон</item>
+        <item>Чингисхан</item>
+        <item>Гиппократ</item>
+        <item>Шрек</item>
+        <item>Золушка</item>
+        <item>Элвин и Бурундуки</item>
+        <item>Золотая рыбка</item>
+        <item>Гарри Поттер</item>
+        <item>Герда</item>
+        <item>Колобок</item>
+        <item>Оловянный солдатик</item>
+        <item>Умка</item>
+        <item>Дед Мороз</item>
+        <item>Кристина Агилера</item>
+        <item>Селена Гомес</item>
+        <item>Барбара Стрейзанд</item>
+        <item>50 сент</item>
+        <item>Уитни Хьюстон</item>
+        <item>Лучано Паваротти</item>
+        <item>Валерий Меладзе</item>
+        <item>Филипп Киркоров</item>
+        <item>Сергей Лазарев</item>
+        <item>Тимати</item>
+        <item>Скарлетт Йоханссон</item>
+        <item>Вин Дизель</item>
+        <item>Дэниел Рэдклифф</item>
+        <item>Брюс Уиллис</item>
+        <item>Киану Ривз</item>
+        <item>Бетховен</item>
+        <item>Бах</item>
+        <item>Мэрилин Монро</item>
+        <item>Яна Клочкова</item>
+        <item>Капитан Америка</item>
+        <item>Халк</item>
+        <item>Рене Декарт</item>
+        <item>Жан-Жак Руссо</item>
+        <item>Бенедикт Спиноза</item>
+        <item>Черчилль</item>
+        <item>Александр Македонский</item>
+        <item>Авраам Линкольн</item>
+        <item>Александр Сергеевич Пушкин</item>
+    </string-array>
+</resources>

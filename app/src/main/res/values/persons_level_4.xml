@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="persons_level_4">
+        <item>Алеша Попович</item>
+        <item>Лиса Алиса</item>
+        <item>Аленький цветочек</item>
+        <item>Артемон</item>
+        <item>Буратино</item>
+        <item>Бармалей</item>
+        <item>Бременские музыканты</item>
+        <item>Белоснежка</item>
+        <item>Варвара краса-Длинная коса</item>
+        <item>баба-Яга</item>
+        <item>Барабашка</item>
+        <item>Гулливер</item>
+        <item>Змей Горыныч</item>
+        <item>крокодил Гена</item>
+        <item>царь Гвидон</item>
+        <item>Гендальф</item>
+        <item>Гудвин</item>
+        <item>гуси-лебеди</item>
+        <item>Дюймовочка</item>
+        <item>Дуремар</item>
+        <item>королевич Елисей</item>
+        <item>Ёжик в тумане</item>
+        <item>Жар-Птица</item>
+        <item>Железный Ганс</item>
+        <item>Золотая рыбкa</item>
+        <item>Илья Муромец</item>
+        <item>Иванушка–дурачок</item>
+        <item>Кот в сапогах</item>
+        <item>Крошка Енот</item>
+        <item>Конёк-Горбунок</item>
+        <item>Кощей Бессмертный</item>
+        <item>домовенок Кузя</item>
+        <item>папа Карло</item>
+        <item>Кай</item>
+        <item>Карабас-Барабас</item>
+        <item>Лунтик</item>
+        <item>Леший</item>
+        <item>морозко</item>
+        <item>Муха-Цокотуха</item>
+        <item>Маугли</item>
+        <item>Мальвина</item>
+        <item>Мойдодыр</item>
+        <item>Маленький Мук</item>
+        <item>Мюнхаузен</item>
+        <item>Незнайка</item>
+        <item>Несмеяна</item>
+        <item>Ниф-Ниф</item>
+        <item>Наф-Наф</item>
+        <item>Нуф-Нуф</item>
+        <item>Олле-Лукойе</item>
+        <item>Оловянный солдатик</item>
+        <item>Пьерро</item>
+        <item>почтальон Печкин</item>
+        <item>Петрушка</item>
+        <item>Пеппи Длинный чулок</item>
+        <item>Пятачок</item>
+        <item>курочка Ряба</item>
+        <item>Рапунцель</item>
+        <item>Снежная Королева</item>
+        <item>Соловей Разбойник</item>
+        <item>Сивка Бурка</item>
+        <item>Снегурочка</item>
+        <item>Спящая Красавица</item>
+        <item>Тортилла</item>
+        <item>три Толстяка</item>
+        <item>Таранище</item>
+        <item>Урфин Джюс</item>
+        <item>Финист Ясный сокол</item>
+        <item>Федора</item>
+        <item>Хаврошечка</item>
+        <item>Царевна-Лягушка</item>
+        <item>Муха Цокотуха</item>
+        <item>Чиполлино</item>
+        <item>Чудо-юдо</item>
+        <item>Чебурашка</item>
+        <item>Шапокляк</item>
+        <item>Шалтай Болтай</item>
+        <item>Пузырь и Лапоть</item>
+        <item>Пьерро</item>
+        <item>Электроник</item>
+        <item> Элли</item>
+        <item>Мальвина</item>
+        <item>Каспер</item>
+        <item>Илья Муромец</item>
+        <item>Добрыня Никитич</item>
+        <item>Алеша Попович</item>
+        <item>Финист</item>
+        <item>Марья Моревна</item>
+        <item>Варвара-Краса</item>
+        <item>Тугарин Змей</item>
+        <item>сестрица Аленушка</item>
+        <item>братец Иванушка</item>
+        <item>черепаха Тортилла</item>
+        <item>Бастиан</item>
+        <item>Баранкин</item>
+        <item>Бада</item>
+        <item>Вилли Вонка</item>
+        <item>Гаврош</item>
+        <item>Джереми Джеймс</item>
+        <item>Джим Хокинс</item>
+    </string-array>
+</resources>

@@ -21,6 +21,11 @@ public class PersonsDB {
         sResourcesMap = new HashMap<>();
         sResourcesMap.put(1, R.array.persons_level_1);
         sResourcesMap.put(2, R.array.persons_level_2);
+        sResourcesMap.put(3, R.array.persons_level_3);
+        sResourcesMap.put(4, R.array.persons_level_4);
+        sResourcesMap.put(5, R.array.persons_level_5);
+        sResourcesMap.put(6, R.array.persons_level_6);
+
     }
 
     private Context mContext;

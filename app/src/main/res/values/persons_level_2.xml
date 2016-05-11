@@ -1,20 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="persons_level_2">
-        <item>2Сальвадор Дали</item>
-        <item>2Чарли Чаплин</item>
-        <item>2Ленин</item>
-        <item>2Менделеев</item>
-        <item>2Карл Маркс</item>
-        <item>2Моцарт</item>
-        <item>2Галилео Галилей</item>
-        <item>2Юлий Цезарь</item>
-        <item>2Сократ</item>
-        <item>2Мойдодыр</item>
-        <item>2Том и Джерри</item>
-        <item>2Баба Яга</item>
-        <item>2Конек-Горбунок</item>
-        <item>2Три поросенка</item>
-        <item>2Гулливер</item>
+        <item>Деонардо да Винчи</item>
+        <item>Коко Шанель</item>
+        <item>Бернард Шоу</item>
+        <item>Дарвин</item>
+        <item>Мартин Лютер</item>
+        <item>Александр Македонский</item>
+        <item>Конфуций</item>
+        <item>Бармалей</item>
+        <item>Винни-Пух</item>
+        <item>Принцессы Диснея</item>
+        <item>Гарфилд</item>
+        <item>Василиса Прекрасная</item>
+        <item>Карлсон</item>
+        <item>Барон Мюнхаузен</item>
+        <item>Иванушка-Дурачок</item>
+        <item>Мальчик-с-Пальчик</item>
+        <item>Пиноккио</item>
+        <item>Чипполино</item>
+        <item>Рианна</item>
+        <item>Дженнифер Лопес</item>
+        <item>Бейонсе</item>
+        <item>Николь Ричи</item>
+        <item>Кортни Лав</item>
+        <item>Гвен Стефани</item>
+        <item>Анастасия Стоцкая</item>
+        <item>Ани Лорак</item>
+        <item>Максим</item>
+        <item>Вера Брежнева</item>
+        <item>Саша Грей</item>
+        <item>Оливия Уайлд</item>
+        <item>Джессика Альба</item>
+        <item>Мила Кунис</item>
+        <item>Сильвестр Сталлоне</item>
+        <item>Уилл Смит</item>
+        <item>Юрий Гагарин</item>
+        <item>Эдди Мерфи</item>
+        <item>Дольче и Габбана</item>
+        <item>Гучи</item>
+        <item>Шевченко Андрей</item>
+        <item>Виктор Гюго</item>
+        <item>Джордж Буш младший</item>
+        <item>Михаил Саакашвили</item>
+        <item>Потап И Настя Каменских</item>
+        <item>Макс Барских</item>
+        <item>Пикачу</item>
+        <item>Телепузики</item>
+        <item>Алина Гросу</item>
+        <item>Виталий Кличко</item>
+        <item>Микеладжело</item>
+        <item>Пикассо</item>
+        <item>Зигмунд Фрейд</item>
+        <item>Лев Толстой</item>
+        <item>Александр Дюма</item>
+        <item>Капитан Джеймс Кук</item>
+        <item>Христофор Колумб</item>
+        <item>Евклид</item>
+        <item>Пифагор</item>
+        <item>Спанч-Боб</item>
+        <item>Бэтмен</item>
+        <item>Гуси-Лебеди</item>
+        <item>Маугли</item>
+        <item>Белоснежка</item>
+        <item>Капитан Врунгель</item>
+        <item>Кот Матроскин</item>
+        <item>Робинзон Крузо</item>
+        <item>Щелкунчик</item>
+        <item>Джастин Бибер</item>
+        <item>Тимберлейк</item>
+        <item>Кэти Перри</item>
+        <item>Аврил Лавин</item>
+        <item>Мосеррат Кабалье</item>
+        <item>Фредди Мерьюри</item>
+        <item>Настя Кменских</item>
+        <item>Баста</item>
+        <item>Бьянка</item>
+        <item>Ирина Дубцова</item>
+        <item>Моника Беллучи</item>
+        <item>Джейсон Стэтхем</item>
+        <item>Арнольд Шварценеггер</item>
+        <item>Пенелопа Крус</item>
+        <item>Дженнифер Лопес</item>
+        <item>Линдси Лохан</item>
+        <item>Скрябин</item>
+        <item>Кузьма</item>
+        <item>Юдашкин</item>
+        <item>Армани</item>
+        <item>Алексендр Дюма</item>
+        <item>Чарльз Диккенс</item>
+        <item>Джон Кеннеди</item>
+        <item>Оля Полякова</item>
+        <item>Тина Кароль</item>
     </string-array>
 </resources>

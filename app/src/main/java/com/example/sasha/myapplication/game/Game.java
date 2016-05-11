@@ -98,7 +98,7 @@ public class Game {
     }
 
     public void onPersonGuessed() {
-        String person = mPersonsIn.remove(0);
+        mPersonsIn.remove(0);
         Team activeTeam = getActiveTeam();
         int score = getTeamScore(activeTeam);
         mTeamScores.put(activeTeam, score + 1);

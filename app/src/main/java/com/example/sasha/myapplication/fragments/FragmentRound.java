@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,7 +58,6 @@ public class FragmentRound extends Fragment {
 
         mView = inflater.inflate(R.layout.fragment_round, container, false);
         mTimerView = (TextView) mView.findViewById(R.id.timer_view);
-//        mPersonsInGame = Game.getCurrentGame().getPersons();
 
         startTimer();
         mPerson = (TextView) mView.findViewById(R.id.person);
@@ -79,10 +79,14 @@ public class FragmentRound extends Fragment {
                     mCountDownTimer.cancel();
                     if (currentGame.isGameFinished()) {
                         //show winner
+                        String name = getActivity().getSupportFragmentManager().getBackStackEntryAt(0).getName();
+                        getActivity().getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentWinners()).addToBackStack(null).commit();
                     } else {
                         currentGame.rotateActiveTeam();
                         currentGame.startNextRound();
+                        String name = getActivity().getSupportFragmentManager().getBackStackEntryAt(0).getName();
+                        getActivity().getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
                     }
                 }
@@ -122,6 +126,8 @@ public class FragmentRound extends Fragment {
                                 //person was not guessed
                                 currentGame.onPersonNotGuessed();
                                 currentGame.rotateActiveTeam();
+                                String name = getActivity().getSupportFragmentManager().getBackStackEntryAt(0).getName();
+                                getActivity().getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
                             }
                         });
@@ -133,6 +139,8 @@ public class FragmentRound extends Fragment {
                                 currentGame.onPersonGuessed();
                                 if (!currentGame.isGameFinished() && !currentGame.isRoundFinished()) {
                                     currentGame.rotateActiveTeam();
+                                    String name = getActivity().getSupportFragmentManager().getBackStackEntryAt(0).getName();
+                                    getActivity().getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
                                 }
 
@@ -142,6 +150,8 @@ public class FragmentRound extends Fragment {
                                     } else {
                                         currentGame.rotateActiveTeam();
                                         currentGame.startNextRound();
+                                        String name = getActivity().getSupportFragmentManager().getBackStackEntryAt(0).getName();
+                                        getActivity().getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
                                     }
                                 }

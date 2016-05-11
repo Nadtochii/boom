@@ -3,6 +3,7 @@ package com.example.sasha.myapplication.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,16 +46,16 @@ public class FragmentWinners extends Fragment {
 
         String winners = "";
         for (int i = 0; i < mWinners.size(); i++) {
-            Log.d("Boom", String.valueOf(mWinners.get(i).getName()));
             winners = winners + String.valueOf(mWinners.get(i).getName()) + "\n";
         }
-        Log.d("Boom", "1111" + winners);
         mWinnersList.setText(winners);
 
         mNewGame = (Button) mView.findViewById(R.id.startNewGame);
         mNewGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String name = getActivity().getSupportFragmentManager().getBackStackEntryAt(0).getName();
+                getActivity().getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentMain()).addToBackStack(null).commit();
             }
         });

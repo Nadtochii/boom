@@ -15,4 +15,5 @@
     <string name="circle">Круг: </string>
     <string name="round">Раунд: </string>
     <string name="team_play">Играет команда: </string>
+    <string name="start_new_game">Начать новую игру</string>
 </resources>

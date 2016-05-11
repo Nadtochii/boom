@@ -76,7 +76,7 @@ public class Game {
     }
 
     public boolean isGameFinished() {
-        return isRoundFinished() && mGameRound == GameRound.ONE_WORD_GUESS;
+        return (isRoundFinished() && (mGameRound == GameRound.ONE_WORD_GUESS));
     }
 
     public void startNextRound() {

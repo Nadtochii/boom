@@ -2,6 +2,7 @@ package com.example.sasha.myapplication.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,16 +58,19 @@ public class FragmentRound extends Fragment {
                 if (!currentGame.isGameFinished() && !currentGame.isRoundFinished()) {
                     mPerson.setText(currentGame.getCurrentPerson());
                 }
-                if (currentGame.isGameFinished()) {
-                    mTimer.cancel();
-                    //show winner
-                    mWinners = currentGame.getWinners();
-                }
+
                 if (currentGame.isRoundFinished()) {
-                    currentGame.rotateActiveTeam();
-                    currentGame.startNextRound();
-                    mTimer.cancel();
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                    if (currentGame.isGameFinished()) {
+                        mTimer.cancel();
+                        //show winner
+                        mWinners = currentGame.getWinners();
+                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentWinners()).addToBackStack(null).commit();
+                    } else {
+                        currentGame.rotateActiveTeam();
+                        currentGame.startNextRound();
+                        mTimer.cancel();
+                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                    }
                 }
             }
         });
@@ -96,20 +100,21 @@ public class FragmentRound extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 //person was guessed
+                                currentGame.onPersonGuessed();
                                 if (!currentGame.isGameFinished() && !currentGame.isRoundFinished()) {
-                                    currentGame.onPersonGuessed();
                                     currentGame.rotateActiveTeam();
                                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
                                 }
-                                if (currentGame.isGameFinished()) {
-                                    currentGame.onPersonGuessed();
-                                    mWinners = currentGame.getWinners();
-                                }
+
                                 if (currentGame.isRoundFinished()) {
-                                    currentGame.onPersonGuessed();
-                                    currentGame.rotateActiveTeam();
-                                    currentGame.startNextRound();
-                                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                                    if (currentGame.isGameFinished()) {
+                                        mWinners = currentGame.getWinners();
+                                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentWinners()).addToBackStack(null).commit();
+                                    } else {
+                                        currentGame.rotateActiveTeam();
+                                        currentGame.startNextRound();
+                                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRoundInfo()).addToBackStack(null).commit();
+                                    }
                                 }
                             }
                         });

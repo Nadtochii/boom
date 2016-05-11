@@ -2,6 +2,7 @@ package com.example.sasha.myapplication.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +38,6 @@ public class FragmentMain extends Fragment {
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Game newGame= new Game();
-                //Game.setCurrentGame(newGame);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentSettings()).addToBackStack(null).commit();
             }
         });

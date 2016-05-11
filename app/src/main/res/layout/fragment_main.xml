@@ -14,20 +14,10 @@
     <Button
         android:layout_width="@dimen/mainBtnWidth"
         android:layout_height="@dimen/mainBtnHeight"
-        android:text="@string/exit"
-        android:id="@+id/exit"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/btnBackgroundColor"
-        android:layout_marginBottom="@dimen/margin_bottom" />
-
-    <Button
-        android:layout_width="@dimen/mainBtnWidth"
-        android:layout_height="@dimen/mainBtnHeight"
         android:text="@string/rules"
         android:id="@+id/rules"
-        android:layout_above="@+id/exit"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
         android:background="@color/btnBackgroundColor"
         android:layout_marginBottom="@dimen/margin_bottom" />
 

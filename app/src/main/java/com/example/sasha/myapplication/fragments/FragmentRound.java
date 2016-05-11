@@ -32,7 +32,6 @@ public class FragmentRound extends Fragment {
     private TimerTask mTimerTask;
 
     private ArrayList<String> mPersonsInGame;
-    private ArrayList<Team> mWinners;
 
     private Game currentGame = Game.getCurrentGame();
 
@@ -63,7 +62,6 @@ public class FragmentRound extends Fragment {
                     if (currentGame.isGameFinished()) {
                         mTimer.cancel();
                         //show winner
-                        mWinners = currentGame.getWinners();
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentWinners()).addToBackStack(null).commit();
                     } else {
                         currentGame.rotateActiveTeam();
@@ -108,7 +106,6 @@ public class FragmentRound extends Fragment {
 
                                 if (currentGame.isRoundFinished()) {
                                     if (currentGame.isGameFinished()) {
-                                        mWinners = currentGame.getWinners();
                                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentWinners()).addToBackStack(null).commit();
                                     } else {
                                         currentGame.rotateActiveTeam();

@@ -11,8 +11,6 @@ import com.example.sasha.myapplication.game.PersonsDB;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private Button mRulesButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentMain()).addToBackStack(null).commit();
-//        mRulesButton = (Button)findViewById(R.id.button2);
-//        mRulesButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mRulesButton.setText("This is rules!");
-//            }
-//        });
     }
 
     @Override

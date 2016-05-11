@@ -2,6 +2,7 @@ package com.example.sasha.myapplication.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,9 @@ import com.example.sasha.myapplication.adapters.TeamScoreAdapter;
 import com.example.sasha.myapplication.events.EventType;
 import com.example.sasha.myapplication.events.EventsManager;
 import com.example.sasha.myapplication.game.Game;
+import com.example.sasha.myapplication.game.GameRound;
+
+import java.util.HashMap;
 
 /**
  * Created by Sasha on 03.05.2016.
@@ -29,6 +33,13 @@ public class FragmentRoundInfo extends Fragment implements EventsManager.EventHa
 
     private Game mCurrentGame;
 
+    private static HashMap<GameRound, String> mRoundsMap;
+    static {
+        mRoundsMap = new HashMap<>();
+        mRoundsMap.put(GameRound.ALIAS, "АЛИАС");
+        mRoundsMap.put(GameRound.SHOW_OFF, "ПОКАЗУХА");
+        mRoundsMap.put(GameRound.ONE_WORD_GUESS, "СЛОВО");
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
@@ -43,15 +54,18 @@ public class FragmentRoundInfo extends Fragment implements EventsManager.EventHa
         EventsManager.addHandler(EventType.SCORE_CHANGED, this);
 
         mCircle = (TextView) mView.findViewById(R.id.id_circle);
-        mCurrentTeam = (TextView) mView.findViewById(R.id.id_player_team);
+//        mCircle.setText(String.valueOf(mCurrentGame.getCurrentRound()));
+        mCircle.setText(mRoundsMap.get(mCurrentGame.getCurrentRound()));
 
-        mCircle.setText(String.valueOf(mCurrentGame.getCurrentRound()));
+        mCurrentTeam = (TextView) mView.findViewById(R.id.id_player_team);
         mCurrentTeam.setText(String.valueOf(mCurrentGame.getActiveTeam().getName()));
 
         mStartRoundBtn = (Button) mView.findViewById(R.id.startGameBtn);
         mStartRoundBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String name = getActivity().getSupportFragmentManager().getBackStackEntryAt(0).getName();
+                getActivity().getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentRound()).addToBackStack(null).commit();
             }
         });

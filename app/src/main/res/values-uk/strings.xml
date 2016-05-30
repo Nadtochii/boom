@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">БУМ</string>
+    <string name="play">Грати</string>
+    <string name="rules">Правила</string>
+    <string name="exit">Вихід</string>
+    <string name="next">Далі</string>
+    <string name="teams_number">Кількість команд</string>
+    <string name="level">Рівень</string>
+    <string name="words_number">Кількість слів</string>
+    <string name="round_time">Тривалість раунда</string>
+    <string name="start_game">Почати гру!</string>
+    <string name="start_round">Почати раунд!</string>
+    <string name="guessed">Вгадано</string>
+    <string name="not_guessed">Не вгадано</string>
+    <string name="circle">Коло: </string>
+    <string name="round">Раунд: </string>
+    <string name="team_play">Грає команда: </string>
+    <string name="start_new_game">Почати нову гру</string>
+    <string name="winners">Переможці:</string>
+    <string name="time_end">Час вийшов!</string>
+</resources>

@@ -17,4 +17,5 @@
     <string name="team_play">Играет команда: </string>
     <string name="start_new_game">Начать новую игру</string>
     <string name="winners">Победители:</string>
+    <string name="time_end">Время вышло!</string>
 </resources>

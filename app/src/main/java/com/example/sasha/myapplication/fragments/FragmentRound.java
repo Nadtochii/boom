@@ -175,7 +175,11 @@ public class FragmentRound extends Fragment {
             timeInMilliseconds = SystemClock.uptimeMillis() - startTime;
             int seconds = (int) (timeInMilliseconds / 1000);
             seconds = seconds % 60;
-            mTimerView.setText(String.format("%02d", seconds));
+            if ( Game.ROUND_TIME/1000 == seconds ) {
+                mTimerView.setText(R.string.time_end);
+            } else {
+                mTimerView.setText(String.format("%02d", Game.ROUND_TIME / 1000 - seconds));
+            }
         }
     };
 }
